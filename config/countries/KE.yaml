@@ -1,0 +1,28 @@
+series:
+  VIX: VIXCLS                  # global risk benchmark
+  DGS10: KE_10Y_BOND          # CBK 10-year Treasury Bond Yield (local)
+  TB3M: KE_91D_BILL           # CBK 91-day T-bill yield (local)
+  NFCI: NFCI                  # fallback global financial stress indicator
+  UNRATE: KE_UNRATE           # Kenya unemployment rate (KNBS)
+  CPI: KE_CPI                 # Kenya CPI index (KNBS)
+  PMI: KE_STANBIC_PMI         # Stanbic Kenya PMI (licensed or manual)
+  SP500: SP500                # global equity proxy
+  AAA: AAA10YM                # US AAA corporate yield (proxy)
+  BAA: BAA10YM                # US BAA corporate yield (proxy)
+window_days: 120
+smoothing_span: 7
+fallbacks:
+  slope:
+    primary: [KE_10Y_BOND, KE_91D_BILL]
+    fallback: [DGS10, TB3MS]
+  pmi:
+    primary: [KE_STANBIC_PMI]
+    fallback: [NAPM]
+  cpi:
+    primary: [KE_CPI]
+    fallback: [CPIAUCSL]
+  ur:
+    primary: [KE_UNRATE]
+    fallback: [UNRATE]
+
+

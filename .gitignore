@@ -1,0 +1,28 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Node
+ui/node_modules/
+ui/dist/
+
+# Coverage
+.coverage
+coverage/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Data temp
+data/raw/*.parquet
+data/raw/*.tmp
+
+
+

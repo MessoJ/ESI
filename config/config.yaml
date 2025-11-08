@@ -1,0 +1,33 @@
+default_window_days: 1260
+smoothing_span: 7
+max_ffill_monthly_days: 40
+max_ffill_weekly_days: 10
+buckets:
+  financial: [vix, slope_stress, nfci]
+  macro: [ur, cpi_yoy, pmi_stress]
+  sentiment: [dd30_stress, baa_aaa]
+weights:
+  financial: 0.4
+  macro: 0.4
+  sentiment: 0.2
+
+# New math parameters
+standard_method: robust  # robust|standard
+winsorize:
+  low_q: 0.01
+  high_q: 0.99
+window_days:
+  financial: 1260
+  weekly: 520
+  macro_months: 60
+bootstrap:
+  n: 500
+  block_size: 7
+  enabled: false
+kalman:
+  obs_noise: 1.0
+  state_noise: 0.1
+pca:
+  rolling_window_days: 0
+
+

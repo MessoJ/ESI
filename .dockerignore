@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Node
+node_modules/
+build/
+dist/
+.next/
+out/
+yarn.lock
+package-lock.json
+
+# Data and notebooks
+*.ipynb_checkpoints/
+notebooks/
+data/
+*.sqlite
+*.db
+
+# VCS
+.git/
+.gitignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Cache
+.cache/
+.mypy_cache/
+.pytype/
+pytest_cache/
+
+# Docker
+**/.dockerignore
+
+# Coverage
+.coverage
+htmlcov/
